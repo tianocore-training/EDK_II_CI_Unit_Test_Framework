@@ -766,6 +766,17 @@ Total Stats
 ```
 To redirect the output to the Debug Serial Port, in the EmulatorPkg.dsc file change the library for the library class `UnitTestResultReportLib` to the implementation for `UnitTestResultReportLibDebugLib.inf`
 
+# Solutions:
+
+See class files for the solution 
+
+- . . .FW/LabSampleCode/LessonU_Unit_Test
+
+Compare then copy the following:
+
+- Copy the `EmulatorPkg.dsc` to C:/FW/edk2-ws/edk2/EmulatorPkg/EmulatorPkg.dsc
+
+- Copy the Dir `Test` to C:/FW/edk2-ws/edk2/UnitTestFrameworkPkg 
 
 
 
