@@ -38,4 +38,4 @@ To see the Slides goto https://gitpitch.com/Laurie0131/EDK_II_CI_Unit_Test_Frame
 
 The EDI II CI Unit Test Framework Presentation: https://github.com/tianocore-training/EDK_II_CI_Unit_Test_Framework/blob/master/EDK_II_CI_Unit_Test_Framewrok_Validation.pdf
 
-The EDI II CI Unit Test Framework Lab Guide: https://github.com/tianocore-training/EDK_II_CI_Unit_Test_Framework/blob/master/UnitTestFramework_Lab.md
+The EDI II CI Unit Test Framework Lab Guide: https://github.com/tianocore-training/EDK_II_CI_Unit_Test_Framework/blob/master/UnitTestFramework_LabGuide.md
