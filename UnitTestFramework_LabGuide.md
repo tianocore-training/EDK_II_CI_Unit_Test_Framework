@@ -1,6 +1,15 @@
 # Unit Test Framework Lab
 The following  is a lab for using the Unit Test Framework 
 
+## Slide 1  @title[CI Unit Test Framework for Developer Validation Lab]
+
+## UEFI & EDK II Training
+
+ Continuous Integration (CI) Unit Test Framework for Developer Validation Lab
+
+<br>
+<a href='http://www.tianocore.org'>tianocore.org</a>
+
 ## **About**
 
 This lab will show how to build and run a unit test sample code in the host-based environment.
@@ -32,13 +41,23 @@ This lab will show how to build and run a unit test sample code in the host-base
 Perform Lab Setup from previous Labs  <a href="https://github.com/tianocore-training/Platform_Build_Win_Emulator_Lab/blob/master/Lab_guide.md#slide-12--titlecreate-work-space-directory">LabGuide</a>  Slides 12 - 17
 
 
-
 ## **2. Build and Run for Stuart CI Locally**
 The following steps are for Building with the CI Pytool locally for the UnitTestFrameworkPkg Host based Unit Tests. Note that the "`<Your tag>`" in the examples below needs to be one of the prerequisite compilers above:
 * Windows - Visual Studio "`2017`" or "`2019`"
 * Ubuntu 18.04 or Fedora - "`GCC5`" 
 
-1. Install the pip requirements  (Pip is in the `Pythonxx/Scripts` Directory Also Note, Proxy option  needed behind a firewall)
+
+
+1. Open commamd Prompt CD to C:\FW\edk2-ws
+
+
+Setup the local environment: (see batch file setenv.bat )
+```
+$> set WORKSPACE=%CD%
+$> set PACKAGES_PATH=%WORKSPACE%\edk2;%WORKSPACE%\edk2-libc
+```
+
+2. Install the pip requirements  (Pip is in the `Pythonxx/Scripts` Directory Also Note, Proxy option  needed behind a firewall)
 ```shell
 $ pip install --upgrade -r pip-requirements.txt
 
@@ -47,19 +66,19 @@ $ pip install --upgrade -r pip-requirements.txt
 $ pip install --upgrade -r pip-requirements.txt --proxy http://proxy-chain.intel.com:911
 ```
 
-2. Get the code dependencies (done only when submodules change)
+3. Get the code dependencies (done only when submodules change)
 ```shell
 $ stuart_setup -c .pytool\CISettings.py TOOL_CHAIN_TAG=<Your TAG>
 ```
-3. Update other dependencies (done on new command prompt)
+4. Update other dependencies (done on new command prompt)
 ```shell
 $ stuart_update -c .pytool\CISettings.py TOOL_CHAIN_TAG=<Your TAG>
 ```
-4. Build the BaseTools (done only when BaseTools change and first time)
+5. Build the BaseTools (done only when BaseTools change and first time)
 ```shell
 $ python BaseTools\Edk2ToolsBuild.py -t TOOL_CHAIN_TAG
 ```
-5. Compile and Run the Host based Unit Test modules
+6. Compile and Run the Host based Unit Test modules
 ```shell
 $ stuart_ci_build -c .pytool\CISettings.py TOOL_CHAIN_TAG=<Your TAG> -p UnitTestFrameworkPkg -t NOOPT -a X64
 ```
