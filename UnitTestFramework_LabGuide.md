@@ -48,14 +48,8 @@ The following steps are for Building with the CI Pytool locally for the UnitTest
 
 
 
-1. Open commamd Prompt CD to C:\FW\edk2-ws
+1. Open commamd Prompt CD to C:\FW\edk2-ws\edk2
 
-
-Setup the local environment: (see batch file setenv.bat )
-```
-$> set WORKSPACE=%CD%
-$> set PACKAGES_PATH=%WORKSPACE%\edk2;%WORKSPACE%\edk2-libc
-```
 
 2. Install the pip requirements  (Pip is in the `Pythonxx/Scripts` Directory Also Note, Proxy option  needed behind a firewall)
 ```shell
