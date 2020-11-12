@@ -48,7 +48,12 @@ The following steps are for Building with the CI Pytool locally for the UnitTest
 
 
 
-1. Open commamd Prompt CD to C:\FW\edk2-ws\edk2
+1. Open commamd Prompt - CD C:\FW\Edk2-ws and run setup script to setup `WORKSPACE` and Packages path
+```
+$ cd C:\FW\edk2-ws
+$ Setenv.bat
+$ cd edk2
+```
 
 
 2. Install the pip requirements  (Pip is in the `Pythonxx/Scripts` Directory Also Note, Proxy option  needed behind a firewall)
@@ -70,7 +75,7 @@ $ stuart_update -c .pytool\CISettings.py TOOL_CHAIN_TAG=<Your TAG>
 ```
 5. Build the BaseTools (done only when BaseTools change and first time)
 ```shell
-$ python BaseTools\Edk2ToolsBuild.py -t TOOL_CHAIN_TAG
+$ python BaseTools\Edk2ToolsBuild.py -t <Your TAG>
 ```
 6. Compile and Run the Host based Unit Test modules
 ```shell
