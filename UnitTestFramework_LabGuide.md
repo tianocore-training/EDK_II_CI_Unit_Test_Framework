@@ -122,6 +122,11 @@ Open A Visual Studio Command Prompt
 * Then click on the command prompt for "Developer Command Prompt for VS20xx"
 * This will open a black Command line window for you to invoke the build and run commands
 * At the command prompt Change directgory (Cd) to the WorkSpace/edk2 directory (the directory from the `git clone` above)
+```
+$ cd C:\FW\edk2-ws
+$ Setenv.bat
+$ cd edk2
+```
 
 Build the BaseTools 
 At the command prompt in the directory of your Workspace/edk2 invoke the following:
@@ -293,7 +298,7 @@ Log Output End
 
 ```
 
-#### Run test results with Automatic test results 
+#### **Optional** - Run test results with Automatic test results 
 Use a Script file to get (Errorlevel==0) for a test pass or (Errorlevel==1) for a test Failure. 
 
 To test automatically test pass/fail using a script file, check for string "\<failed\>" in XML file from other sample unit test with Host .EXE using a grep or on Windows `FindStr`
